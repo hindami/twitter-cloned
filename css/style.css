@@ -1,0 +1,529 @@
+/* CSS RESET */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+font-family: 'Segoe UI Regular';
+src: url('../font/Segoe UI.ttf');
+}
+
+
+@font-face {
+font-family: 'Segoe UI Italic';
+src: url('../font/Segoe UI Italic.ttf');
+}
+
+
+@font-face {
+font-family: 'Segoe UI Bold';
+src: url('../font/Segoe UI Bold.ttf');
+}
+
+
+@font-face {
+font-family: 'Segoe UI Bold Italic';
+src: url('../font/Segoe UI Bold Italic.ttf');
+}
+
+* {box-sizing: border-box;}
+
+body{
+  text-align: center;
+  font-family: 'Segoe UI Regular';
+}
+
+.main-container {
+  display: grid;
+}
+
+.first-container {
+  background-color: #1DA1F2;
+  color: white;
+  grid-area: first;
+  width: 100%;
+}
+
+.second-container {
+  background-color: white;
+  grid-area: second;
+  z-index: 3;
+}
+
+.third-container {
+  margin: 0 auto 0 auto;
+  padding: 0;
+  grid-area: third;
+  display: inline-block;
+  text-align: center;
+  background: white;
+}
+
+.third-container>a {
+  z-index: 10000;
+}
+
+@media screen and (max-width: 799px) {
+  .main-container {
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 300px 30px;
+    grid-template-areas: "second"
+                         "first"
+                         "third";
+    }
+
+  .first-container {
+   width: 100%;
+   padding-top: 30px;
+  }
+
+  .first-container-1 {
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+    width: 350px;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+    align-items: center;
+  }
+
+  .first-container-1>i, .first-container-1>h3 {
+    z-index: 3;
+  }
+
+  .first-container-1 h3 {
+    text-align: left;
+    font-family: 'Segoe UI Bold';
+  }
+
+  #burung {
+    position:absolute;
+    width: 100%;
+    opacity: 0.2;
+    z-index: 0;
+    top:55%;
+    left:40%;
+  }
+
+  .second-container {
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+    width:100%;
+  }
+
+	.second-container-0{
+		display: none;
+	}
+
+  .second-container-1{
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: #1DA1F2;
+    width: 350px;
+  }
+
+  .second-container-2{
+    margin:0 auto;
+    padding-top: 20px;
+    text-align: left;
+    width: 350px;
+  }
+
+  .second-container-2 h2{
+    font-family: 'Segoe UI Bold';
+    font-size: 27px;
+    padding: 0 50px 40px 0;
+  }
+
+  .second-container-2 h3{
+    font-family: 'Segoe UI Bold';
+    font-size: 16px;
+    padding: 0 40px 20px 0;
+  }
+
+  .second-container-2 button{
+    display: block;
+    height: 40px;
+    width: 350px;
+    border-radius: 18px;
+    font-family: 'Segoe UI Bold';
+  }
+
+  #sign-up {
+    border: 1px solid #1DA1F2;
+    margin: 10px 0 15px 0;
+    background-color: #1DA1F2;
+    color: white;
+  }
+
+  #sign-in-2 {
+    border: 1px solid #1DA1F2;
+    margin: 10px 0 20px 0;
+    background-color: white;
+    color: #1DA1F2;
+  }
+
+  #sign-in-1 {
+    border: 1px solid #1DA1F2;
+    border-radius: 18px;
+    width: 60px;
+    height: 40px;
+    font-family: 'Segoe UI Bold';
+    background-color: white;
+    color: #1DA1F2;
+  }
+
+  .third-container {
+    margin:  20px 0;
+    padding:  10px 0 0 0;
+    background-color: white;
+    align-self: center;
+  }
+
+  .third-container a {
+    text-decoration: none;
+    color: gray;
+    padding: 2px 5px;
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1045px){
+  .main-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 600px 40px;
+    grid-template-areas: "first second"
+                          "third third";
+  }
+
+    .first-container {
+     width: 100%;
+     padding-top: 170px;
+    }
+
+    .first-container-1 {
+      margin: 0 auto;
+      padding: 20px 0 20px 0;
+      width: 350px;
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-column-gap: 30px;
+      grid-row-gap: 40px;
+      align-items: center;
+    }
+
+    .first-container-1>i, .first-container-1>h3 {
+      z-index: 3;
+    }
+
+    .first-container-1 h3 {
+      text-align: left;
+      font-family: 'Segoe UI Bold';
+    }
+
+    #burung {
+      position:absolute;
+      width: 100%;
+      opacity: 0.2;
+      z-index: 0;
+      top:55%;
+      left:40%;
+    }
+
+    .second-container {
+      margin: 0 auto;
+      padding: 100px 0 0 0;
+      width:100%;
+      height:100%;
+    }
+
+		.second-container-0 {
+			display:none;
+		}
+
+    .second-container-1{
+      margin:0 auto;
+      display: flex;
+      justify-content: space-between;
+      color: #1DA1F2;
+      width: 350px;
+    }
+
+    .second-container-2{
+      margin:0 auto;
+      padding-top: 20px;
+      text-align: left;
+      width: 350px;
+    }
+
+    .second-container-2 h2{
+      font-family: 'Segoe UI Bold';
+      font-size: 27px;
+      padding: 0 50px 40px 0;
+    }
+
+    .second-container-2 h3{
+      font-family: 'Segoe UI Bold';
+      font-size: 16px;
+      padding: 0 40px 20px 0;
+    }
+
+    .second-container-2 button{
+      display: block;
+      height: 40px;
+      width: 350px;
+      border-radius: 18px;
+      font-family: 'Segoe UI Bold';
+    }
+
+    #sign-up {
+      border: 1px solid #1DA1F2;
+      margin: 10px 0 15px 0;
+      background-color: #1DA1F2;
+      color: white;
+    }
+
+    #sign-in-2 {
+      border: 1px solid #1DA1F2;
+      margin: 10px 0 20px 0;
+      background-color: white;
+      color: #1DA1F2;
+    }
+
+    #sign-in-1 {
+			border: 1px solid #1DA1F2;
+	    border-radius: 18px;
+	    width: 60px;
+	    height: 40px;
+	    font-family: 'Segoe UI Bold';
+	    background-color: white;
+	    color: #1DA1F2;
+    }
+
+    .third-container {
+      margin:  20px 0;
+      padding:  10px 0 0 0;
+      background-color: white;
+      align-self: center;
+    }
+
+    .third-container a {
+      text-decoration: none;
+      color: gray;
+      padding: 2px 5px;
+      font-size: 14px;
+    }
+
+}
+
+@media screen and (min-width: 1046px)  {
+	.main-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 630px 40px;
+    grid-template-areas: "first second"
+                          "third third";
+  }
+
+    .first-container {
+     width: 100%;
+     padding-top: 200px;
+    }
+
+		
+
+    .first-container-1 {
+      margin: 0 auto;
+      padding: 20px 0 20px 0;
+      width: 350px;
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-column-gap: 30px;
+      grid-row-gap: 40px;
+      align-items: center;
+			font-size: 18px;
+    }
+
+    .first-container-1>i, .first-container-1>h3 {
+      z-index: 3;
+    }
+
+    .first-container-1 h3 {
+      text-align: left;
+      font-family: 'Segoe UI Bold';
+    }
+
+    #burung {
+      position:absolute;
+      width: 100%;
+      opacity: 0.2;
+      z-index: 0;
+      top:55%;
+      left:40%;
+    }
+
+    .second-container {
+      margin: 0 auto;
+      padding: 35px 0 0 0;
+      width:100%;
+      height:100%;
+    }
+
+		.second-container-0 {
+			margin: 0 auto 50px auto;
+			width: 100%;
+		}
+
+		.second-container-0 form {
+			margin: 0 auto;
+		}
+
+		.second-container-0 a{
+			text-decoration: none;
+			color:#ccccb3;
+			font-size: 14px;
+			padding-left: 46px;
+		}
+
+		.login-form {
+			border : 1px solid #ececec;
+			border-radius: 4px;
+			height: 49px;
+			width: 210px;
+			margin: 0 5px;
+		}
+
+
+
+		#masuk {
+			border: 1px solid #1DA1F2;
+	    border-radius: 23px;
+	    width: 65px;
+	    height: 49px;
+	    font-family: 'Segoe UI Bold';
+	    background-color: white;
+	    color: #1DA1F2;
+		}
+
+    .second-container-1{
+      margin:0 auto;
+      display: flex;
+      justify-content: space-between;
+      color: #1DA1F2;
+      width: 350px;
+    }
+
+    .second-container-2{
+      margin:0 auto;
+      padding-top: 20px;
+      text-align: left;
+      width: 350px;
+    }
+
+    .second-container-2 h2{
+      font-family: 'Segoe UI Bold';
+      font-size: 27px;
+      padding: 0 50px 40px 0;
+    }
+
+    .second-container-2 h3{
+      font-family: 'Segoe UI Bold';
+      font-size: 16px;
+      padding: 0 40px 20px 0;
+    }
+
+    .second-container-2 button{
+      display: block;
+      height: 40px;
+      width: 350px;
+      border-radius: 18px;
+      font-family: 'Segoe UI Bold';
+    }
+
+
+
+    #sign-up {
+      border: 1px solid #1DA1F2;
+      margin: 10px 0 15px 0;
+      background-color: #1DA1F2;
+      color: white;
+    }
+
+    #sign-in-2 {
+      border: 1px solid #1DA1F2;
+      margin: 10px 0 20px 0;
+      background-color: white;
+      color: #1DA1F2;
+    }
+
+    #sign-in-1 {
+			display: none;
+    }
+
+    .third-container {
+      margin:  20px 0;
+      padding:  10px 0 0 0;
+      background-color: white;
+      align-self: center;
+    }
+
+    .third-container a {
+      text-decoration: none;
+      color: gray;
+      padding: 2px 5px;
+      font-size: 14px;
+    }
+}
